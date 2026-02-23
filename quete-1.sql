@@ -1,7 +1,7 @@
-select * from vehicules
+SELECT * FROM vehicules;
 
-select * from vehicules where etat = 'disponible'
+SELECT * FROM vehicules WHERE etat = 'disponible';
 
-select * from vehicules where location = 'Paris'
+SELECT * FROM vehicules WHERE location = 'Paris';
 
-select * from vehicules where autonomie_km >= 400
+SELECT * FROM vehicules WHERE autonomie_km >= 400;
