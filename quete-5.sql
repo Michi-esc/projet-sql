@@ -11,11 +11,11 @@ GROUP BY localisation
 ORDER BY nb_vehicules DESC
 LIMIT 1;
 
-SELECT c.id_client, c.nom, c.prenom, COUNT(l.id_location) AS nb_locations
-FROM client c
-JOIN location l ON c.id_client = l.id_client
-GROUP BY c.id_client, c.nom, c.prenom
-HAVING COUNT(l.id_location) >= 2;
+SELECT id_client, nom, prenom, COUNT(id_location) AS nb_locations
+FROM client 
+Natural JOIN location 
+GROUP BY id_client,nom,prenom
+HAVING COUNT(id_location) >= 2;
 
 SELECT v.id, v.marque, v.modele
 FROM vehicules v

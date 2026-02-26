@@ -18,3 +18,7 @@ La table vehicule décrit les véhicules, la table station recense les stations,
 La table location est centrale dans le modèle, elle relie les clients, les véhicules et les stations grâce à des clés étrangères ce qui aide a savoir qui loue quel véhicule, sur quelle période et entre quelles stations
 Ce modèle répond aux besoins de cIAra Mobility en permettant le suivi des véhicules, la gestion des stations, l’historique des clients et la traçabilité complète des locations, constituant ainsi une base fiable pour la gestion et l’optimisation 
 
+Les requêtes SQL ont été construites de manière progressive en partant des tables nécessaires, puis en ajoutant les jointures, les filtres
+Les JOIN ont permis de relier les tables (clients, locations, véhicules, stations), les fonctions comme COUNT et AVG ont servi à produire des résultat globaux ou par groupe à l’aide de GROUP BY
+HAVING a été utilisée pour rajouter un paramètre de comptage 
+Le LEFT JOIN combiné à IS NULL a permis d’identifier les véhicules jamais loués
